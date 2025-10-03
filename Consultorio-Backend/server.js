@@ -79,6 +79,22 @@ app.delete("/usuarios/:id", (req, res) => {
   });
 });
 
+// LOGIN: validar usuario
+app.post("/login", (req, res) => {
+  const { Nombre_usuario, Contraseña } = req.body;
+
+  const sql = "SELECT * FROM usuario WHERE Nombre_usuario = ? AND Contraseña = ?";
+  db.query(sql, [Nombre_usuario, Contraseña], (err, results) => {
+    if (err) return res.status(500).send("Error en la consulta");
+
+    if (results.length === 0) {
+      return res.status(401).send("Usuario o contraseña incorrectos");
+    }
+
+    res.json({ message: "Login exitoso", user: results[0] });
+  });
+});
+
 // ===================================================
 
 app.listen(PORT, () => {
