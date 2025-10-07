@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
-import { Link, useRouter } from 'expo-router';
 import axios from 'axios';
+import { Link, useRouter } from 'expo-router';
+import React, { useState } from 'react';
+import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 // --- IMPORTANTE ---
 // Reemplaza esta IP por la de tu backend (ej. 10.0.2.2 para emulador Android)
@@ -10,7 +10,7 @@ const API_URL = 'http://192.168.1.149:3000';
 export default function LoginScreen() {
   const [nombreUsuario, setNombreUsuario] = useState('');
   const [contraseña, setContraseña] = useState('');
-  const router = useRouter(); // Hook de navegación de Expo Router
+  const router = useRouter(); // Hook para la navegación  
 
   const handleLogin = async () => {
     if (!nombreUsuario || !contraseña) {

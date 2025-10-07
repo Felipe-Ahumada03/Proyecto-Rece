@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
-import { Link, useRouter } from 'expo-router'; // Link ya estaba importado, ¡perfecto!
 import axios from 'axios';
+import { Link, useRouter } from 'expo-router'; // Link ya estaba importado, ¡perfecto!
+import React, { useState } from 'react';
+import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 // --- IMPORTANTE ---
 // Usa la misma IP que configuraste en la pantalla de Login.
@@ -19,11 +19,12 @@ export default function RegisterScreen() {
       return;
     }
     try {
-      const response = await axios.post(`${API_URL}/usuarios`, {
+      const response = await axios.post(`${API_URL}/register`, {
         Nombre_usuario: nombreUsuario,
         Contraseña: contraseña,
         Rol: rol,
       });
+
 
       Alert.alert('Éxito', response.data);
       router.back(); // Regresa a la pantalla anterior (Login)
