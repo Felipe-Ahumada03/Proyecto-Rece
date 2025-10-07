@@ -48,3 +48,17 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Información del repositorio y ramas
+
+Este repositorio contiene el front-end del proyecto desarrollado con Expo/React Native.
+
+- Remotos configurados en tu copia local:
+   - `origin` -> https://github.com/JoseManuel351/ArquiReceplus.git
+   - `felipe` -> https://github.com/Felipe-Ahumada03/Proyecto-Rece.git
+
+- Ramas relevantes:
+   - `main` - rama principal original
+   - `manuel` - rama con tus cambios actualmente publicada en `felipe/manuel`
+
+Si quieres que empuje también este README a `origin` o que cree un PR en el repo de Felipe, dímelo.
